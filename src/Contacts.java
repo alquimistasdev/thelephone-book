@@ -6,13 +6,13 @@ public class Contacts {
     private String sobrenome;
     private String cpf;
     private String email;
-    public static List<Contacts> pessoas = new ArrayList<>();
+    static List<Contacts> contatos = new ArrayList<>();
 
     public Contacts(String nome, String sobrenome, String cpf) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cpf = cpf;
-        Contacts.pessoas.add(this);
+        Contacts.contatos.add(this);
     }
 
     public Contacts(String nome, String sobrenome, String cpf, String email) {
@@ -20,7 +20,6 @@ public class Contacts {
         this.sobrenome = sobrenome;
         this.cpf = cpf;
         this.email = email;
-        Contacts.pessoas.add(this);
     }
 
     public String getNome() {
@@ -62,6 +61,7 @@ public class Contacts {
                 ", sobrenome='" + sobrenome + '\'' +
                 ", cpf='" + cpf + '\'' +
                 ", email='" + email + '\'' +
+                ", contatos=" + contatos +
                 '}';
     }
 }
