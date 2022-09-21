@@ -2,12 +2,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Phone {
+    private String contato;
     private String numeroTelefone;
-    static List<Phone> telefones = new ArrayList<>();
 
-    public Phone(String numeroTelefone) {
+    public Phone(String contato, String numeroTelefone) {
+        this.contato = contato;
         this.numeroTelefone = numeroTelefone;
-        Phone.telefones.add(this);
+    }
+
+    public String getContato() {
+        return contato;
+    }
+
+    public void setContato(String contato) {
+        this.contato = contato;
     }
 
     public String getNumeroTelefone() {
@@ -21,7 +29,8 @@ public class Phone {
     @Override
     public String toString() {
         return "Phone{" +
-                "numeroTelefone='" + numeroTelefone + '\'' +
+                "contato='" + contato + '\'' +
+                ", numeroTelefone='" + numeroTelefone + '\'' +
                 '}';
     }
 }

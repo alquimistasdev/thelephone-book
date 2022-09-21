@@ -6,13 +6,11 @@ public class Contacts {
     private String sobrenome;
     private String cpf;
     private String email;
-    static List<Contacts> contatos = new ArrayList<>();
 
     public Contacts(String nome, String sobrenome, String cpf) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cpf = cpf;
-        Contacts.contatos.add(this);
     }
 
     public Contacts(String nome, String sobrenome, String cpf, String email) {
@@ -61,7 +59,6 @@ public class Contacts {
                 ", sobrenome='" + sobrenome + '\'' +
                 ", cpf='" + cpf + '\'' +
                 ", email='" + email + '\'' +
-                ", contatos=" + contatos +
                 '}';
     }
 }
