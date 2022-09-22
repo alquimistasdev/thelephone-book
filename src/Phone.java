@@ -1,21 +1,10 @@
-import java.util.ArrayList;
-import java.util.List;
-
-public class Phone {
-    private String contato;
+public class Phone extends Contact {
+    public Contact contato;
     private String numeroTelefone;
 
-    public Phone(String contato, String numeroTelefone) {
-        this.contato = contato;
+    public Phone(String nome, String sobrenome, String cpf, String numeroTelefone) {
+        super(nome, sobrenome, cpf);
         this.numeroTelefone = numeroTelefone;
-    }
-
-    public String getContato() {
-        return contato;
-    }
-
-    public void setContato(String contato) {
-        this.contato = contato;
     }
 
     public String getNumeroTelefone() {
@@ -26,10 +15,11 @@ public class Phone {
         this.numeroTelefone = numeroTelefone;
     }
 
+
     @Override
     public String toString() {
         return "Phone{" +
-                "contato='" + contato + '\'' +
+                "contato=" + contato +
                 ", numeroTelefone='" + numeroTelefone + '\'' +
                 '}';
     }

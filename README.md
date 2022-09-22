@@ -20,19 +20,19 @@ Classes a serem implementadas:
 
 Métodos:
 * Notebook
-- Adicionar pessoa na lista: O mínimo para cadastrar uma pessoa é: nome, sobrenome e CPF. O CPF tem que ser único.
-- Remover pessoa da lista: precisa remover também os telefones que estão ligados a ela.
-- Mostrar contato e número de telefone na tela;
-- Adicionar número de telefone: Para cadastrar um telefone, é necessário ter uma pessoa cadastrada. Adicionar um telefone
+-[ ] Adicionar pessoa na lista: O mínimo para cadastrar uma pessoa é: nome, sobrenome e CPF. O CPF tem que ser único.
+-[ ] Remover pessoa da lista: precisa remover também os telefones que estão ligados a ela.
+-[ ] Mostrar contato e número de telefone na tela;
+-[ ] Adicionar número de telefone: Para cadastrar um telefone, é necessário ter uma pessoa cadastrada. Adicionar um telefone
 na lista de telefones do contato.
-- Remover telefone da lista de telefones do contato;
-- Atualizar telefone da lista de telefones do contato;
-- Atualizar pessoa;
-* Contacts
+-[ ] Remover telefone da lista de telefones do contato;
+-[ ] Atualizar telefone da lista de telefones do contato;
+-[ ] Atualizar pessoa;
+* Contact
 * Phone
 
 Variáveis da Classe:
-* Contacts
+* Contact
 - nome, sobrenome, cpf, email, listaPhone;
 
 * Phone
