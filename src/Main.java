@@ -1,5 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        Contacts contato = new Contacts("Leonardo", "da Costa","11111111111");
+        Contact contato = new Contact("Leonardo", "da Costa","11111111111");
     }
 }

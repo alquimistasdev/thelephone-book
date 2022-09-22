@@ -1,23 +1,25 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Contacts {
+public class Contact {
     private String nome;
     private String sobrenome;
     private String cpf;
     private String email;
+    public static List<Phone> fonesContato = new ArrayList<>();
 
-    public Contacts(String nome, String sobrenome, String cpf) {
+    public Contact(String nome, String sobrenome, String cpf) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cpf = cpf;
     }
 
-    public Contacts(String nome, String sobrenome, String cpf, String email) {
+    public Contact(String nome, String sobrenome, String cpf, String email) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cpf = cpf;
         this.email = email;
+
     }
 
     public String getNome() {
