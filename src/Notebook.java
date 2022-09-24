@@ -35,14 +35,15 @@ public class Notebook {
 
     }
 
-    void removerPessoaLista(Contact contact){
+    void removerPessoaLista(Contact contact, Phone phone){
 
-//        if(buscarContatoPorCpf(contact.getCpf()) == contact) {
-//            contatos.remove(contact);
-//            fonesAgenda.remove(contact);
-//        } else {
-//            System.out.println("Esse contato não existe");
-//        }
+        if(buscarContatoPorCpf(contact.getCpf()) == contact) {
+            contatos.remove(contact);
+            fonesAgenda.remove(phone);
+            Contact.getFonesContato().remove(phone);
+        } else {
+            System.out.println("Esse contato não existe");
+        }
 
     }
 
@@ -50,24 +51,31 @@ public class Notebook {
 
         if (buscarContatoPorCpf(contact.getCpf()) == contact) {
             fonesAgenda.add(phone);
-
-
+            Contact.getFonesContato().add(phone);
+        } else {
+            System.out.println("Escolha um contato válido para adicionar o telefone.");
         }
-
-
-
-
     }
 
-    void removerTelefoneLista(Phone phone){
-        fonesAgenda.remove(phone);
+    void removerTelefoneLista(Phone phone, Contact contact){
+
+        if (buscarContatoPorCpf(contact.getCpf()) == contact) {
+            fonesAgenda.remove(phone);
+            Contact.getFonesContato().remove(phone);
+        } else {
+            System.out.println("Escolha um contato válido para remover o telefone.");
+        }
+
     }
 
     void atualizarTelefoneLista(){
 
     }
 
-    void atualizarPessoaLista(){
+    void atualizarPessoaLista(Contact contact){
+
+        validarInformacoesObrigatoriasContato(contact);
+
 
     }
 }
