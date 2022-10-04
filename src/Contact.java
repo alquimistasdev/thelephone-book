@@ -54,6 +54,14 @@ public class Contact {
         this.email = email;
     }
 
+    public static List<Phone> getFonesContato() {
+        return fonesContato;
+    }
+
+    public static void setFonesContato(List<Phone> fonesContato) {
+        Contact.fonesContato = fonesContato;
+    }
+
     @Override
     public String toString() {
         return "Contacts{" +
