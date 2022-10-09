@@ -1,9 +1,11 @@
-public class Phone extends Contact {
-    public Contact contato;
+public class Phone {
+
+    private Contact contatoFone;
     private String numeroTelefone;
 
-    public Phone(String nome, String sobrenome, String cpf, String numeroTelefone) {
-        super(nome, sobrenome, cpf);
+
+    public Phone(Contact contatoFone, String numeroTelefone) {
+        this.contatoFone = contatoFone;
         this.numeroTelefone = numeroTelefone;
     }
 
@@ -15,12 +17,16 @@ public class Phone extends Contact {
         this.numeroTelefone = numeroTelefone;
     }
 
+    public Contact getContatoFone() {
+        return contatoFone;
+    }
+
+    public void setContatoFone(Contact contatoFone) {
+        this.contatoFone = contatoFone;
+    }
 
     @Override
     public String toString() {
-        return "Phone{" +
-                "contato=" + contato +
-                ", numeroTelefone='" + numeroTelefone + '\'' +
-                '}';
+        return numeroTelefone;
     }
 }

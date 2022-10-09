@@ -22,7 +22,7 @@ Métodos:
 * Notebook
 -[ ] Adicionar pessoa na lista: O mínimo para cadastrar uma pessoa é: nome, sobrenome e CPF. O CPF tem que ser único.
 -[ ] Remover pessoa da lista: precisa remover também os telefones que estão ligados a ela.
--[ ] Mostrar contato e número de telefone na tela;
+-[ ] Mostrar lista de contatos na tela;
 -[ ] Adicionar número de telefone: Para cadastrar um telefone, é necessário ter uma pessoa cadastrada. Adicionar um telefone
 na lista de telefones do contato.
 -[ ] Remover telefone da lista de telefones do contato;

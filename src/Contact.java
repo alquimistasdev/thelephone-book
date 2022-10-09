@@ -1,12 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Contact {
     private String nome;
     private String sobrenome;
     private String cpf;
     private String email;
-    public static List<Phone> fonesContato = new ArrayList<>();
+    private List<Phone> fonesContato = new ArrayList<>();
 
     public Contact(String nome, String sobrenome, String cpf) {
         this.nome = nome;
@@ -54,21 +55,34 @@ public class Contact {
         this.email = email;
     }
 
-    public static List<Phone> getFonesContato() {
+    public List<Phone> getFonesContato() {
         return fonesContato;
     }
 
-    public static void setFonesContato(List<Phone> fonesContato) {
-        Contact.fonesContato = fonesContato;
+    public void setFonesContato(List<Phone> fonesContato) {
+        this.fonesContato = fonesContato;
     }
 
     @Override
     public String toString() {
-        return "Contacts{" +
-                "nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return "Contato: " +
+                "\nnome: " + nome +
+                "\nsobrenome: " + sobrenome +
+                "\nCPF: " + cpf +
+                "\nemail: " + email +
+                "\ntelefones: " + fonesContato;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Contact contact = (Contact) o;
+        return cpf.equals(contact.cpf);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cpf);
     }
 }
