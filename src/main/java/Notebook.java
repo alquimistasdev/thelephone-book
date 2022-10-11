@@ -65,21 +65,33 @@ public class Notebook {
         } else {
             System.out.println("Escolha um contato válido para remover o telefone.");
         }
-
     }
 
-    public void atualizarTelefoneLista(){
-
+    public void atualizarTelefoneLista(Contact contact, Phone phone){
+        if(buscarContatoPorCpf(contact.getCpf())==contact){
+            //phone.setNumeroTelefone("6666-6666");
+        }
     }
 
     public void atualizarPessoaLista(Contact contact){
-
         validarInformacoesObrigatoriasContato(contact);
-
+        if (buscarContatoPorCpf(contact.getCpf())== contact){
+            for (int i = 0; i < contatos.size(); i++) {
+                //achar posição do contato na lista
+                //substituir pelo contato que estou mandando na linha 76
+                contatos.set(0,contact);
+            }
+        }else{
+            System.out.println("Esta pessoa não está cadastrada.");
+        }
     }
 
     public void mostrarListaContatos() {
         contatos.forEach(System.out::println);
+    }
+
+    public int mostrarTamanhoLista(){
+        return contatos.size();
     }
 
 }

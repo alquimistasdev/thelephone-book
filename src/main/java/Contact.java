@@ -70,7 +70,8 @@ public class Contact {
                 "\nsobrenome: " + sobrenome +
                 "\nCPF: " + cpf +
                 "\nemail: " + email +
-                "\ntelefones: " + fonesContato;
+                "\ntelefones: " + fonesContato +
+                "\n";
     }
 
     @Override
