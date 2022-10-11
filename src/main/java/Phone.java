@@ -1,11 +1,11 @@
 public class Phone {
 
-    private Contact contatoFone;
+    private Contact contatoNome;
     private String numeroTelefone;
 
 
-    public Phone(Contact contatoFone, String numeroTelefone) {
-        this.contatoFone = contatoFone;
+    public Phone(Contact contatoNome, String numeroTelefone) {
+        this.contatoNome = contatoNome;
         this.numeroTelefone = numeroTelefone;
     }
 
@@ -18,11 +18,11 @@ public class Phone {
     }
 
     public Contact getContatoFone() {
-        return contatoFone;
+        return contatoNome;
     }
 
     public void setContatoFone(Contact contatoFone) {
-        this.contatoFone = contatoFone;
+        this.contatoNome = contatoFone;
     }
 
     @Override

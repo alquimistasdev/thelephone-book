@@ -13,6 +13,13 @@ public class Main {
         Phone phone2 = new Phone(contato2, "99600-1010");
         notebook.adicionarTelefone(phone2, contato2);
 
+        Contact contato3 = new Contact("Felipe","Neves", "078.217.081-53");
+        notebook.adicionarPessoaLista(contato3);
+        Phone phone3 = new Phone(contato3, "99837-4020");
+        notebook.adicionarTelefone(phone3, contato3);
+
+        notebook.atualizarPessoaLista(contato2);
+        notebook.atualizarTelefoneLista(contato, phone);
         notebook.mostrarListaContatos();
 
         
