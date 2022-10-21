@@ -86,4 +86,8 @@ public class Contact {
     public int hashCode() {
         return Objects.hash(cpf);
     }
+
+    public int mostrarTamanhoListaFonesContato() {
+        return fonesContato.size();
+    }
 }

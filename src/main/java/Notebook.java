@@ -35,16 +35,23 @@ public class Notebook {
 
     }
 
-    public void removerPessoaLista(Contact contact, Phone phone){
+//    Receber como parâmetro o Contato e todos os telefones do contato
+//    Validar o contato
+//    Remover o contato
+//    Remover todos os telefones do contato da Lista Telefonica
+//    Remover todos os telefones do Contato
+
+
+    public void removerPessoaLista(Contact contact){
 
         if(buscarContatoPorCpf(contact.getCpf()) == contact) {
+            contact.getFonesContato().forEach(telefone -> {
+                fonesAgenda.removeIf(t -> t.getNumeroTelefone().equals(telefone.getNumeroTelefone()));
+            });
             contatos.remove(contact);
-            fonesAgenda.remove(phone);
-            contact.getFonesContato().remove(phone);
         } else {
             System.out.println("Esse contato não existe");
         }
-
     }
 
     public void adicionarTelefone(Phone phone, Contact contact){
@@ -90,8 +97,12 @@ public class Notebook {
         contatos.forEach(System.out::println);
     }
 
-    public int mostrarTamanhoLista(){
+    public int mostrarTamanhoListaContatos(){
         return contatos.size();
+    }
+
+    public int mostrarTamanhoListaTelefones() {
+        return fonesAgenda.size();
     }
 
 }
