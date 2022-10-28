@@ -82,9 +82,9 @@ public class Notebook {
 
     public void atualizarDadosPessoaLista(Contact contact){
         validarInformacoesObrigatoriasContato(contact);
-        if (buscarContatoPorCpf(contact.getCpf()) == contact){
+        if (buscarContatoPorCpf(contact.getCpf()).getCpf().equals(contact.getCpf())){
             //achar posição do contato na lista
-            for (int i = 0; i < contatos.size(); i++) {
+            for(int i = 0; i < contatos.size(); i++) {
                 if(contatos.get(i).getCpf().equals(contact.getCpf())){
                     contatos.get(i).setNome(contact.getNome());
                     contatos.get(i).setSobrenome(contact.getSobrenome());
