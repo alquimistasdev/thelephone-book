@@ -70,7 +70,35 @@ public class Tests {
 
     }
 
+    @Test
+    void testeAtualizarTelefone(){
+        Notebook notebook = new Notebook();
 
+        Contact contato = new Contact("Leonardo", "da Costa","098.765.432-10");
+        notebook.adicionarPessoaLista(contato);
+
+        Phone phone = new Phone(contato, "99660-8010");
+        notebook.adicionarTelefone(phone, contato);
+
+        notebook.atualizarTelefoneLista(contato, phone);
+
+    }
+
+    @Test
+    void testeAtualizarDadosPessoaLista(){
+        Notebook notebook = new Notebook();
+
+        Contact contato = new Contact("Leonardo", "da Costa","098.765.432-10");
+        notebook.adicionarPessoaLista(contato);
+
+        Contact contato2 = new Contact("Bruno", "Tomaz", "111.111.111-02");
+        notebook.adicionarPessoaLista(contato2);
+
+        Phone phone = new Phone(contato, "99660-8010");
+        notebook.adicionarTelefone(phone, contato);
+
+        notebook.atualizarDadosPessoaLista(contato);
+    }
 
 //    testeAtualizarTelefone
 //    testeAtualizarPessoa
