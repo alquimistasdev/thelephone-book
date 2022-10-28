@@ -80,13 +80,16 @@ public class Notebook {
         }
     }
 
-    public void atualizarPessoaLista(Contact contact){
+    public void atualizarDadosPessoaLista(Contact contact){
         validarInformacoesObrigatoriasContato(contact);
-        if (buscarContatoPorCpf(contact.getCpf())== contact){
+        if (buscarContatoPorCpf(contact.getCpf()) == contact){
+            //achar posição do contato na lista
             for (int i = 0; i < contatos.size(); i++) {
-                //achar posição do contato na lista
-                //substituir pelo contato que estou mandando na linha 76
-                contatos.set(0,contact);
+                if(contatos.get(i).getCpf().equals(contact.getCpf())){
+                    contatos.get(i).setNome(contact.getNome());
+                    contatos.get(i).setSobrenome(contact.getSobrenome());
+                    contatos.get(i).setEmail(contact.getEmail());
+                }
             }
         }else{
             System.out.println("Esta pessoa não está cadastrada.");

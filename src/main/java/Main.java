@@ -18,10 +18,8 @@ public class Main {
         Phone phone3 = new Phone(contato3, "99837-4020");
         notebook.adicionarTelefone(phone3, contato3);
 
-        notebook.atualizarPessoaLista(contato2);
-        notebook.atualizarTelefoneLista(contato, phone);
-        notebook.mostrarListaContatos();
 
-        
+        notebook.atualizarDadosPessoaLista(contato);
+        notebook.mostrarListaContatos();
     }
 }
